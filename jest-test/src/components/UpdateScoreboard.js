@@ -5,18 +5,20 @@
 
 import React from "react";
 
-class Fouls extends React.Component {
+class Update extends React.Component {
   constructor() {
     super();
     this.state = {
       fouls: 0,
-      strikes: 0
+      strikes: 0,
+      hits: 0,
+      balls: 0,
     };
 
   }
   // Need arrow functions here instead of just { } because not using .bind(this) below so 'this' is defined
 
-
+// Foul Counter  
   foulCountChange = () => {
     // Increasing fouls by 1 but not strikes if already have 2 strikes 
     if(this.state.strikes === 2){
@@ -33,13 +35,36 @@ class Fouls extends React.Component {
     }
 }
 
-  strikeCountChange = () => {
+// Strike Counter 
+strikeCountChange = () => {
+    if(this.state.strikes === 2){
+      this.setState({
+          strikes: 0,
+          fouls: 0,
+          balls: 0,
+      });
+    }else {
+      // Increasing strikes by 1 and fouls by 1 
+      this.setState({
+        strikes: this.state.strikes + 1
+
+      });
+    }
+}
+
+  // Hit Counter 
+  hitCountChange = () => {
     this.setState(prevState => ({
-      strikes: prevState.strikes + 1
+      hits: prevState.hits + 1
     }));
   };
 
-//   componentDidUpdate(prevProps, prevState)
+  // Ball Counter
+  ballCountChange = () => {
+    this.setState(prevState => ({
+      balls: prevState.balls + 1
+    }));
+  };
 
 
   render() {
@@ -50,20 +75,31 @@ class Fouls extends React.Component {
         {/* // Foul Button  */}
         <h3>Fouls</h3>
         <button onClick={this.foulCountChange}>
-          {/* <button onClick={this.hitCountChange.bind(this)}> */}
+          {/* <button onClick={this.hitCountChange.bind(this)}> - would do this for each instead of arrow functions above*/}
           {this.state.fouls}
         </button>
         
         {/* // Strikes Button  */}
         <h3>Strikes</h3>
         <button onClick={this.strikeCountChange}>
-          {/* <button onClick={this.hitCountChange.bind(this)}> */}
           {this.state.strikes}
         </button>
+
+          {/* // Hits Button  */}
+          <h3>Hits</h3>
+          <button onClick={this.hitCountChange}>
+          {this.state.hits}
+        </button>
+
+    {/* // Balls Button  */}
+    <h3>Balls</h3>
+        <button onClick={this.ballCountChange}>
+          {this.state.balls}
+          </button>
 
       </div>
     );
   }
 }
 
-export default Fouls;
+export default Update;

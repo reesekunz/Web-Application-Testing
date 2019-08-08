@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import DisplayScoreboard from "./components/Display"
+import DisplayScoreboard from "./components/DisplayScoreboard"
 
 function App() {
   return (
