@@ -16,11 +16,11 @@ describe("<App />", () => {
     render(<App />);
   });
 
-  it("renders Hello World", () => {
+  it("renders Baseball Scoreboard", () => {
     const app = render(<App />);
 
-    app.getByText(/hello world/i);
+    app.getByText(/baseball scoreboard/i);
   });
 
-  it("should render list of people", () => {});
+  it("should render the display for the baseball scoreboard", () => {});
 });

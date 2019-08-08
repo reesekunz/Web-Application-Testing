@@ -18,10 +18,8 @@ class DisplayScoreboard extends React.Component {
 
   render() {
     return <div className="scoreboard">
-
-        <h1>Baseball Scoreboard: </h1>
+      <h2>Baseball Scoreboard </h2>
         <Update />
-
         </div>;
   }
 }

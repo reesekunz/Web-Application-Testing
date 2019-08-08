@@ -30,7 +30,7 @@
   },
   "main": "index.js",
   "devDependencies": {
-    "@testing-library/react": "^8.0.8"
+    "@testing-library/react": "^8.0.9"
   },
   "keywords": [],
   "author": "",
