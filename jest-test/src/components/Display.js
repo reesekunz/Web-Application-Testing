@@ -2,7 +2,6 @@
 // Update display when user records activity on Dashboard component
 
 import React from "react";
-import ReactDOM from "react-dom";
 
 import Strikes from "./Strikes"
 import Balls from "./Balls"
@@ -24,16 +23,16 @@ class DisplayScoreboard extends React.Component {
   render() {
     return <div className="scoreboard">
 
-        <h4>{this.state.balls}</h4>
+        <h4>Balls: </h4>
         <Balls />
 
-        <h4>{this.state.strikes}</h4>
+        <h4>Strikes: </h4>
         <Strikes />
 
-        <h4>{this.state.fouls}</h4>
+        <h4>Fouls: </h4>
         <Fouls />
 
-        <h4>{this.state.hits}</h4>
+        <h4>Hits:</h4>
         <Hits/>
 
         </div>;

@@ -6,9 +6,30 @@
 
 import React from "react";
 
-const Balls = props =>
-<div>
-    <button>Ball</button>
-</div>
+class Balls extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      balls: 0
+    };
+  }
+  // Need arrow function here instead of just {} because not using .bind(this) below so 'this' is defined
+  ballCountChange = () => {
+    this.setState(prevState => ({
+      balls: prevState.balls + 1
+    }));
+  };
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.ballCountChange}>
+          {/* <button onClick={this.hitCountChange.bind(this)}> */}
+          {this.state.balls}
+        </button>
+      </div>
+    );
+  }
+}
 
 export default Balls;
