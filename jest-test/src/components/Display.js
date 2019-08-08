@@ -4,7 +4,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import UpdateScoreboard from "./Dashboard";
+import Strikes from "./Strikes"
+import Balls from "./Balls"
+import Fouls from "./Fouls"
+import Hits from "./Hits"
+
 
 class DisplayScoreboard extends React.Component {
   constructor() {
@@ -19,7 +23,19 @@ class DisplayScoreboard extends React.Component {
 
   render() {
     return <div className="scoreboard">
-        <UpdateScoreboard />
+
+        <h4>Balls:</h4>
+        <Balls />
+
+        <h4>Strikes:</h4>
+        <Strikes />
+
+        <h4>Fouls:</h4>
+        <Fouls />
+
+        <h4>Hits:</h4>
+        <Hits />
+        
         </div>;
   }
 }

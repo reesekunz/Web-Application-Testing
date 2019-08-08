@@ -3,9 +3,9 @@
 
 import React from "react";
 
-const UpdateScoreboard = props =>
+const Strikes = props =>
 <div>
-    UpdateScoreboard Placeholder
+    Strikes Placeholder
 </div>
 
-export default UpdateScoreboard;
+export default Strikes;
