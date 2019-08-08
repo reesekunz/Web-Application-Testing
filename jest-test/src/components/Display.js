@@ -14,27 +14,27 @@ class DisplayScoreboard extends React.Component {
   constructor() {
     super();
     this.state = {
-      strike: 0,
-      ball: 0,
-      foul: 0,
-      hit: 0, 
+      strikes: 0,
+      balls: 0,
+      fouls: 0,
+      hits: 0, 
     };
   }
 
   render() {
     return <div className="scoreboard">
 
-        <h4>{this.state.ball}</h4>
+        <h4>{this.state.balls}</h4>
         <Balls />
 
-        <h4>{this.state.strike}</h4>
+        <h4>{this.state.strikes}</h4>
         <Strikes />
 
-        <h4>{this.state.foul}</h4>
+        <h4>{this.state.fouls}</h4>
         <Fouls />
 
-        <h4>{this.state.hit}</h4>
-        <Hits propsHit={this.state.hit}/>
+        <h4>{this.state.hits}</h4>
+        <Hits/>
 
         </div>;
   }
