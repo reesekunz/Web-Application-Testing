@@ -34,7 +34,7 @@ class DisplayScoreboard extends React.Component {
         <Fouls />
 
         <h4>{this.state.hit}</h4>
-        <Hits hit={this.state.hit}/>
+        <Hits propsHit={this.state.hit}/>
 
         </div>;
   }

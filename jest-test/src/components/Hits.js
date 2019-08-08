@@ -7,7 +7,7 @@ import React from "react";
 
 const Hits= props =>
 <div>
-<button onClick={() => (props.hit + 1)} >
+<button onClick={() => (props.propsHit + 1)} >
 Hit
 </button>
 </div>
