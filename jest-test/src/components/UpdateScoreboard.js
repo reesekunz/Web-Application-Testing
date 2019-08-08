@@ -40,7 +40,6 @@ strikeCountChange = () => {
     if(this.state.strikes === 2){
       this.setState({
           strikes: 0,
-          fouls: 0,
           balls: 0,
       });
     }else {
@@ -55,16 +54,27 @@ strikeCountChange = () => {
   // Hit Counter 
   hitCountChange = () => {
     this.setState(prevState => ({
-      hits: prevState.hits + 1
+      hits: prevState.hits + 1,
+      strikes: 0,
+      balls: 0,
     }));
   };
 
   // Ball Counter
   ballCountChange = () => {
-    this.setState(prevState => ({
-      balls: prevState.balls + 1
-    }));
-  };
+    if(this.state.balls === 3){
+      this.setState({
+          strikes: 0,
+          balls: 0,
+      });
+    }else {
+      // Increasing strikes by 1 and fouls by 1 
+      this.setState({
+        balls: this.state.balls + 1
+
+      });
+    }
+}
 
 
   render() {
