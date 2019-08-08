@@ -5,7 +5,6 @@ import DisplayScoreboard from "./components/DisplayScoreboard"
 function App() {
   return (
     <div className="App">
-    <h1>Baseball Scoreboard: </h1>
       <DisplayScoreboard />
     </div>
   );
