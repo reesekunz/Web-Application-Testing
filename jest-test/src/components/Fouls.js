@@ -12,14 +12,26 @@ class Fouls extends React.Component {
       fouls: 0,
       strikes: 0
     };
+
   }
   // Need arrow functions here instead of just { } because not using .bind(this) below so 'this' is defined
+
+
   foulCountChange = () => {
-    this.setState(prevState => ({
-      fouls: prevState.fouls + 1,
-      strikes: prevState.strikes + 1
-    }));
-  };
+    // Increasing fouls by 1 but not strikes if already have 2 strikes 
+    if(this.state.strikes === 2){
+      this.setState({
+          fouls: this.state.fouls + 1,
+      });
+    }else {
+      // Increasing strikes by 1 and fouls by 1 
+      this.setState({
+        fouls: this.state.fouls + 1,
+        strikes: this.state.strikes + 1
+
+      });
+    }
+}
 
   strikeCountChange = () => {
     this.setState(prevState => ({
@@ -27,7 +39,11 @@ class Fouls extends React.Component {
     }));
   };
 
+//   componentDidUpdate(prevProps, prevState)
+
+
   render() {
+    console.log('strike count', this.state.strikes)
     return (
       <div>
         
