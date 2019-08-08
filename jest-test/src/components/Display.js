@@ -4,6 +4,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import UpdateScoreboard from "./Dashboard";
+
 class DisplayScoreboard extends React.Component {
   constructor() {
     super();
@@ -17,7 +19,7 @@ class DisplayScoreboard extends React.Component {
 
   render() {
     return <div className="scoreboard">
-        Scoreboard Display Placeholder
+        <UpdateScoreboard />
         </div>;
   }
 }

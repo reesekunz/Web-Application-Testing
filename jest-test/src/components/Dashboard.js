@@ -3,4 +3,9 @@
 
 import React from "react";
 
+const UpdateScoreboard = props =>
+<div>
+    UpdateScoreboard Placeholder
+</div>
 
+export default UpdateScoreboard;
