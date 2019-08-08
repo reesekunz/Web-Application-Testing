@@ -1,15 +1,13 @@
-import { add } from "./helpers";
+const help = require('./helpers');
 
-describe("helpers.js", () => {
-  describe("sum function", () => {
-    it("sums two integers", () => {
-      // expect - .toBe() looks for strict equality
-      expect(add(2, 2)).toBe(2);
-      expect(add(2, 3)).toBe(5);
+describe('sum function', () => {
+    it('sum of 2', () => {
+    //   const expected = 3;
+    //   const actual = help.sum(1, 2);
+    //   expect(actual).toBe(expected); // .toBe() looks for strict equality!
 
-      //   const expected = 3;
-      //   const actual = help.sum(1, 2);
-      //   expect(actual).toBe(expected);
+      expect(help.sum(1,2)).toBe(3);
+
     });
-  });
-});
+}); 
+
