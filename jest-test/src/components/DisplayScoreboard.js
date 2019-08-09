@@ -13,6 +13,10 @@ class DisplayScoreboard extends React.Component {
       balls: "",
       fouls: "",
       hits: "", 
+      home: "",
+      away: "",
+      inning: "",
+      outs: "",
     };
   }
 
