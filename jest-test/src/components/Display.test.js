@@ -5,6 +5,8 @@ import "@testing-library/react/cleanup-after-each";
 
 import DisplayScoreboard from "./DisplayScoreboard"
 
-it('renders "Display Scoreboard', () => {
-    expect(wrapper.getByLabelText(/baseball scoreboard/i));
+describe("<DisplayScoreboard />", () => {
+    it('renders "Display Scoreboard', () => {
+    expect(getByLabelText(/Baseball Scoreboard/i));
   });
+});

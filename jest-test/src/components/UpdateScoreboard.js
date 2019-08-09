@@ -81,23 +81,26 @@ class Update extends React.Component {
     return (
       <div>
         {/* // Foul Button  */}
-        <h3>Fouls</h3>
         <button onClick={this.foulCountChange}>
           {/* <button onClick={this.hitCountChange.bind(this)}> - would do this for each instead of arrow functions above*/}
-          {this.state.fouls}
+          Fouls: {this.state.fouls}
         </button>
 
         {/* // Strikes Button  */}
-        <h3>Strikes</h3>
-        <button onClick={this.strikeCountChange}>{this.state.strikes}</button>
+        <button onClick={this.strikeCountChange}>
+          Strikes: {this.state.strikes}
+        </button>
 
         {/* // Hits Button  */}
-        <h3>Hits</h3>
-        <button onClick={this.hitCountChange}>{this.state.hits}</button>
+
+        <button onClick={this.hitCountChange}>Hits: {this.state.hits}</button>
 
         {/* // Balls Button  */}
-        <h3>Balls</h3>
-        <button onClick={this.ballCountChange}>{this.state.balls}</button>
+
+        <button data-testid="button" 
+        onClick={this.ballCountChange}>
+          Balls: {this.state.balls}
+        </button>
       </div>
     );
   }

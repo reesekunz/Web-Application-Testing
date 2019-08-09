@@ -16,11 +16,6 @@ describe("<App />", () => {
     render(<App />);
   });
 
-  it("renders Baseball Scoreboard", () => {
-    const app = render(<App />);
-
-    app.getByText(/baseball scoreboard/i);
-  });
-
-  it("should render the display for the baseball scoreboard", () => {});
+  it("should render baseball scoreboard", () => {});
 });
+
