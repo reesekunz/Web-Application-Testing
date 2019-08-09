@@ -22,7 +22,7 @@ class DisplayScoreboard extends React.Component {
 
   render() {
     return <div className="scoreboard">
-      <h2>Baseball Scoreboard</h2>
+      <h2 className="scoreboard-header">Baseball Scoreboard</h2>
         <Update />
         </div>;
   }

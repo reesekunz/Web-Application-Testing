@@ -2,32 +2,97 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.scoreboard-header {
+
+font-size: 2.3rem;
+font-family: "Bookman Header"
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.score-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 2px solid black;
+  padding: 3%;
+  background-color: darkslategray;
+  font-size: 3rem;
+  color: white;
+
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 3%;
+  background-color: darkslategray;
+  font-size: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  border: 3px solid black;
+  margin-top: 4%;
+  margin-right: 4%;
+  margin-left: 4%;
+
+  padding: 2.5%;
+
+  font-size: 1.5rem;
+  background-color:  darkslategray;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.third-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  border: 3px solid black;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 1%;
+  height: 2rem;
+  width: auto;
+
+  font-size: 1.1rem;
+  background-color:  darkslategray;
+  color: white;
+}
+
+
+.updatebuttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.buttonz {
+
+color: white;
+background-color: black;
+width: 20%;
+height: 4rem;
+font-size: 1.2rem;
+}
+
+.buttonheader {
+  font-size: 2rem;
+  font-family: "Bookman Header";
+  padding-top: 3%;
 }

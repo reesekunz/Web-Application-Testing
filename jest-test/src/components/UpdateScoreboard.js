@@ -9,9 +9,9 @@ class Update extends React.Component {
   constructor() {
     super();
     this.state = {
-      fouls: 0,
+      fouls: 30,
       strikes: 0,
-      hits: 0,
+      hits: 13,
       balls: 0,
       home: 3,
       away: 2,
@@ -124,7 +124,6 @@ class Update extends React.Component {
     }));
   };
 
-
   render() {
     console.log("strikes count", this.state.strikes);
     console.log("balls count", this.state.balls);
@@ -134,45 +133,59 @@ class Update extends React.Component {
     console.log("innings count", this.state.inning);
     return (
       <div>
-        {/* // Foul Button  */}
-        <button onClick={this.foulCountChange}>
-          {/* <button onClick={this.hitCountChange.bind(this)}> - would do this for each instead of arrow functions above*/}
-          Fouls: {this.state.fouls}
-        </button>
+        <div className="score-row">
+          {/* // Away Score  */}
+          <h2 className="team">Away </h2>
+          <div className="score">{this.state.away}</div>
+          {/* // Home Score */}
+          <h2 className="team">Home </h2>
+          <div className="score">{this.state.home}</div>
+        </div>
+        <div className="second-row">
+          {/* // Balls  */}
+          <h3 className="balls">Balls: {this.state.balls}</h3>
+          {/* // Strikes  */}
+          <h3 className="strikes">Strikes: {this.state.strikes}</h3>
+          {/* // Outs */}
+          <h3 className="outs">Outs: {this.state.outs}</h3>
+          {/* // Innings */}
+          <h3 className="inning">Inning: {this.state.inning}</h3>
+        </div>
 
-        {/* // Strikes Button  */}
-        <button onClick={this.strikeCountChange}>
-          Strikes: {this.state.strikes}
-        </button>
+        <div className="third-row">
+          {/* // Hits */}
+          <h3 className="hits">Total Hits: {this.state.hits}</h3>
+          {/* // Foul  */}
+          <h3 className="fouls">Total Fouls: {this.state.fouls}</h3>
+        </div>
 
-        {/* // Hits Button  */}
-
-        <button onClick={this.hitCountChange}>Hits: {this.state.hits}</button>
-
-        {/* // Balls Button  */}
-
-        <button data-testid="button" onClick={this.ballCountChange}>
-          Balls: {this.state.balls}
-        </button>
-
-        {/* // Outs Button  */}
-        <button onClick={this.outCountChange}>Outs: {this.state.outs}</button>
-
-        {/* // Innings Button  */}
-        <button onClick={this.inningCountChange}>
-          Inning: {this.state.inning}
-        </button>
-
-        {/* // Home Score Button  */}
-
-        <button onClick={this.homeCountChange}>
-          Home Score: {this.state.home}
-        </button>
-
-        {/* // Away Score Button  */}
-        <button onClick={this.awayCountChange}>
-          Away Score: {this.state.away}
-        </button>
+        {/* // Buttons */}
+        <div className="buttonheader">Update Scoreboard:</div>
+        <div className="updatebuttons">
+          <button className="buttonz" onClick={this.awayCountChange}>Away Score + 1</button>
+          <button className="buttonz" onClick={this.homeCountChange}>Home Score + 1</button>
+          <button className="buttonz" data-testid="button" onClick={this.ballCountChange}>
+            {" "}
+            Balls + 1{" "}
+          </button>
+          <button className="buttonz" onClick={this.strikeCountChange}>
+            {" "}
+            Strikes + 1
+          </button>
+          <button className="buttonz" onClick={this.outCountChange}>
+            Outs + 1{" "}
+          </button>
+          <button className="buttonz" onClick={this.inningCountChange}>
+            Inning + 1
+          </button>
+          <button className="buttonz" onClick={this.hitCountChange}>
+            Hits + 1
+          </button>
+          <button className="buttonz" onClick={this.foulCountChange}>
+            Fouls + 1
+            {/* <button onClick={this.hitCountChange.bind(this)}> - would do this for each instead of arrow functions above*/}
+          </button>
+        </div>
       </div>
     );
   }
